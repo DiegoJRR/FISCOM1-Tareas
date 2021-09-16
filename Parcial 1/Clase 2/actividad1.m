@@ -1,39 +1,30 @@
 % Actividad 1
 % Equipo "Los Chinojos"
 
-% 1)
+%% a)
 
-sinusoidales(1, 1, 2, 3, 40, 40)
+[1 3 5 7; 2 4 6 8]*[1 8 9; 2 7 10; 3 6 11; 4 5 12]
 
-%% 2)
+%% b)
 
+[3; 2; 4] .* [5; 1; 3]
 
+%% c) 
 
-function plotVortex(A, B)
-    % F(x, y) = Aexp(-r^2/B^2)exp(i theta)r
-   
-    x = linspace(0, 30, 2^8);
-    y = x;
-   
-    [X, Y] = meshgrid(x, y);
-   
-    r = sqrt(X.^2 + Y.^2);
-    theta = atan(Y./X);
-   
-end
+a = exp(1i*pi/4)
+b = sqrt(-4)
+c = log(1i)
 
-function sinusoidales(A1, A2, w1, w2, phi1, phi2)
-    x = linspace(0, 2*pi, 1000);
-   
-    f1 = A1*sin(w1*x + phi1);
-    f2 = A2*sin(w2*x + phi2);
-   
-    figure(1);
-    plot(x, f1, 'k');
-    hold on;
-    plot(x, f2, 'r');
-    hold off;
-   
-    figure(2);
-    plot(x, f1.*f2, 'b');
-end
+%% d)
+
+% Para extraer la parte real
+real(a)
+
+% Para la parte imaginaria
+imag(a)
+
+% Para el angulo 
+angle(a)
+
+% Para el valor absoluto
+abs(a)
